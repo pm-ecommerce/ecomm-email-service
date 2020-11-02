@@ -1,16 +1,17 @@
 package com.pm.ecommerce.email_service.events;
 
-import com.pm.ecommerce.entities.Order;
+import com.pm.ecommerce.entities.ScheduledDelivery;
 import org.springframework.context.ApplicationEvent;
 
 public class OrderCompleteEvent extends ApplicationEvent {
-    private final Order order;
-    public OrderCompleteEvent(Object source, Order order) {
+    private final ScheduledDelivery delivery;
+
+    public OrderCompleteEvent(Object source, ScheduledDelivery delivery) {
         super(source);
-        this.order = order;
+        this.delivery = delivery;
     }
 
-    public Order getOrder() {
-        return order;
+    public ScheduledDelivery getDelivery() {
+        return delivery;
     }
 }

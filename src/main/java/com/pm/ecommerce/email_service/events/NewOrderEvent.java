@@ -10,7 +10,8 @@ public class NewOrderEvent extends ApplicationEvent {
         super(source);
         this.order = message;
     }
-    public Order getOrder(){
+
+    public Order getOrder() {
         return this.order;
     }
 }

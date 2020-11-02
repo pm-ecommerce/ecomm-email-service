@@ -6,7 +6,8 @@
 </head>
 <body>
 Hi {{userName}},
-We have received your order. Thank you for your order. Below is a summary of your order.
+Thank you for placing your order. <br>
+Below is a summary of your order: <br>
 <table>
     <tbody>
     <tr>
@@ -19,12 +20,19 @@ We have received your order. Thank you for your order. Below is a summary of you
     <tr>
         <td>{{name}}</td>
         <td>{{quantity}}</td>
-        <td>{{rate}}</td>
-        <td>{{price}}</td>
+        <td>${{rate}}</td>
+        <td>${{price}}</td>
     </tr>
     {{/orderItems}}
+    <tr>
+        <td>Delivery address</td>
+        <td>
+            {{address1}} {{address2}} <br>
+            {{city}}, {{zipcode}} <br>
+            {{state}}, USA <br>
+        </td>
+    </tr>
     </tbody>
 </table>
-Thank you.
 </body>
 </html>
