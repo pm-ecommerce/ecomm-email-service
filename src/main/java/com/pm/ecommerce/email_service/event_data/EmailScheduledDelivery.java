@@ -2,10 +2,12 @@ package com.pm.ecommerce.email_service.event_data;
 
 import com.pm.ecommerce.entities.Address;
 import com.pm.ecommerce.entities.ScheduledDelivery;
+import lombok.Data;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Data
 public class EmailScheduledDelivery {
     int id;
 

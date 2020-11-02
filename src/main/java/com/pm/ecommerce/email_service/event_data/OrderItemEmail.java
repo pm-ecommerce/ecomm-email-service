@@ -1,7 +1,9 @@
 package com.pm.ecommerce.email_service.event_data;
 
 import com.pm.ecommerce.entities.OrderItem;
+import lombok.Data;
 
+@Data
 public class OrderItemEmail {
     String name;
     int quantity;

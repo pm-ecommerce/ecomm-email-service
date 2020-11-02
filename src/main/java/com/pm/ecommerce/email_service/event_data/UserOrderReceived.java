@@ -2,7 +2,6 @@ package com.pm.ecommerce.email_service.event_data;
 
 import com.pm.ecommerce.entities.Address;
 import com.pm.ecommerce.entities.Order;
-import com.pm.ecommerce.entities.OrderItem;
 import lombok.Data;
 
 import java.util.List;
@@ -31,19 +30,5 @@ public class UserOrderReceived {
         city = address.getCity();
         state = address.getState();
         zipcode = address.getZipcode();
-    }
-
-    public class OrderItemEmail {
-        String name;
-        int quantity;
-        double rate;
-        double price;
-
-        public OrderItemEmail(OrderItem item) {
-            name = item.getProduct().getName();
-            quantity = item.getQuantity();
-            rate = item.getRate();
-            price = rate * quantity;
-        }
     }
 }
